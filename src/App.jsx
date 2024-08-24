@@ -20,6 +20,9 @@ function App() {
   const [forecast, setForecast] = useState(null);
   const [unit, setUnit] = useState('metric');
   const [error, setError] = useState('');
+  const [city, setCity] = useState('');
+  const [country, setCountry] = useState('');
+
   const [backgroundImage, setBackgroundImage] = useState(back);
 
   const handleClear = (e) => {
@@ -29,6 +32,8 @@ function App() {
     setForecast(null);
     setUnit('metric');
     setError('');
+    setCity(null);
+    setCountry(null);
     setBackgroundImage(back);
   };
 
@@ -99,6 +104,9 @@ function App() {
       }
     }
   }, [weather]);
+
+
+  const display = city? city.toLocaleUpperCase()+ ", "+country: '';
 
   return (
     <div className="app"  style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(${backgroundImage})` }}>
