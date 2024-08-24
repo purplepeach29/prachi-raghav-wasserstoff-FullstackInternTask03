@@ -113,14 +113,22 @@ function App() {
       <div className='nav'>
         <h2>WASSERFORECAST</h2>
       </div>
-        <WeatherForm onSearch={fetchWeather} onUnitChange= {setUnit}/>     
-        <button className='clear' onClick={handleClear}>X</button> 
-        <WeatherDetails weather={weather} wind={wind}/>
 
+      <div className='layout'>
 
-      {error && <p className="error">{error}</p>}      
-  
-      <WeatherForecast forecast={forecast} />
+        <div className='form'>
+          <div className='box'>
+            <WeatherForm onSearch={fetchWeather} onUnitChange= {setUnit}/>     
+            <button className='clear' onClick={handleClear}>X</button> 
+          </div>
+          <h2 className='place'>{display}</h2>
+          <WeatherDetails weather={weather} wind={wind}/>
+        </div>
+
+        {error && <p className="error">{error}</p>}      
+    
+        <WeatherForecast forecast={forecast} />
+      </div>
     </div>
   );
 }
