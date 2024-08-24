@@ -66,8 +66,7 @@ function App() {
           description: item.weather[0].main,
           icon: item.weather[0].icon,
         }));
-       
-      //setWeather(weatherData.main);
+      //console.log(forecastData);
       setWeather(weatherData);
       setWind(weatherData.wind);
       setForecast(forecastData);
