@@ -13,6 +13,7 @@ function App() {
   const [forecast, setForecast] = useState(null);
   const [unit, setUnit] = useState('metric');
   const [error, setError] = useState('');
+  const [backgroundImage, setBackgroundImage] = useState(back);
 
   const handleClear = (e) => {
     e.preventDefault();
@@ -68,7 +69,7 @@ function App() {
   
 
   return (
-    <div className="app">
+    <div className="app"  style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(${backgroundImage})` }}>
       <div className='nav'>
         <h2>WASSERFORECAST</h2>
       </div>
