@@ -28,18 +28,18 @@
   margin-bottom: 15px;
   position: relative;
   z-index: 2;
-  color: white;
+  color: black;
 }
 .weather-form .search-bar {
   border: none;
   padding: 10px 11px;
   background-color: transparent;
-  color: rgb(250, 246, 246);
-  border-bottom: 1px solid white;
+  color: black;
+  border-bottom: 1px solid;
   font-size: 16px;
 }
 .weather-form .search-bar::placeholder {
-  color: white;
+  color: black;
 }
 .search-bar:focus {
   outline: none;
@@ -98,8 +98,8 @@
 
 img
 {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }
 .weather-details
 {
@@ -123,30 +123,35 @@ img
 {
   display:flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin: 0px 0px;
   margin-left: auto;
   width: 40%;
   background-color:#0a2f4e96;
+  box-shadow: 4px -5px 10px 2px #0a2f4e;
 }
 
 .forecast-day {
   margin: 7px;
   display: flex;
-  padding: 10px;
+  padding-top: 10px;
   justify-content: space-evenly;
+  align-items: center;
   background-color: rgb(117 170 215 / 53%);
   border-radius: 10px;
   min-width: max-content;
   width: 80%;
 }
 
-.forecast-day > h3, .forecast-day > p {
+.forecast-day > p {
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
+.forecast-day >img{
+  height: 38px;
+}
 .error {
   color: red;
   font-weight: bold;

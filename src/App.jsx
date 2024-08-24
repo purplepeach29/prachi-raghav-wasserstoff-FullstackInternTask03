@@ -71,6 +71,8 @@ function App() {
       setWind(weatherData.wind);
       setForecast(forecastData);
       setError('');
+      setCity(weatherData.name);
+      setCountry(weatherData.sys.country);
       } catch (err) {
       setError('City not found or error fetching data');
       setWeather(null);
