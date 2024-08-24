@@ -104,6 +104,7 @@ img
 .weather-details
 {
   margin-left: 0px;
+  width: 100%;
 }
 .weather-forecast {
   margin: 20px 0;
@@ -112,9 +113,50 @@ img
 .weather-summary
 {
   display:flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
+
+.inner
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.attri
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+
+.weather-attri
+{
+  display: flex;
+  align-items: center;
+}
+h3 > img{
+  margin-right: 10%;
+}
+
+.inner > h3{
+  margin:0px;
+}
+
+.humidity
+{
+  width:25px;
+  height:25px;
+  margin-left:10px; 
+  margin-right:5px;
+}
+
 .box, .layout 
 {
   display: flex;
@@ -151,6 +193,11 @@ img
 
 .forecast-day >img{
   height: 38px;
+}
+
+h2
+{
+  margin: 0px;
 }
 .error {
   color: red;
