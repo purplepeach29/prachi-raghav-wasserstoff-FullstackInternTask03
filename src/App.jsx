@@ -3,6 +3,12 @@ import axios from 'axios';
 import WeatherForm from './components/WeatherForm';
 import WeatherDetails from './components/WeatherDetails';
 import WeatherForecast from './components/WeatherForecast';
+import mist from './assets/mist.jpg';
+import defaultimg from './assets/default.jpg';
+import rain from './assets/rain.jpg';
+import haze from './assets/haze.jpg';
+import back from './assets/bg.gif';
+
 
 const API_KEY = '76bde0717dfb4dd252ac6ce284e36507'; // API key from openweathermap
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
@@ -67,6 +73,31 @@ function App() {
     
   };
   
+  useEffect(() => {
+    if (weather) {
+      switch (weather.weather[0].main) {
+        /*case 'clear':
+          setBackgroundImage('clear.jpg');
+          break;*/
+        case 'Clouds':
+          setBackgroundImage(defaultimg);
+          break;
+        case 'Haze':
+          setBackgroundImage(haze);
+          break;
+        case 'Mist':
+          setBackgroundImage(mist);
+          break;
+        case 'Rain':
+        case 'Thunderstorm': 
+          setBackgroundImage(rain);
+          break;
+        // Add more conditions as needed
+        default:
+          setBackgroundImage(defaultimg);
+      }
+    }
+  }, [weather]);
 
   return (
     <div className="app"  style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(${backgroundImage})` }}>
