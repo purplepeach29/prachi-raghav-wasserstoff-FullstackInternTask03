@@ -151,12 +151,17 @@ h3 > img{
 
 .humidity
 {
-  width:25px;
-  height:25px;
+  width:23px;
+  height:23px;
   margin-left:10px; 
   margin-right:5px;
 }
 
+.wind
+{
+  width:37px;
+  height:37px;
+}
 .box, .layout 
 {
   display: flex;

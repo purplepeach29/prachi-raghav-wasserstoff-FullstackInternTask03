@@ -25,6 +25,7 @@ function App() {
 
   const [backgroundImage, setBackgroundImage] = useState(back);
 
+  //reset values, clear screen
   const handleClear = (e) => {
     e.preventDefault();
     setWeather(null);
@@ -54,7 +55,7 @@ function App() {
           appid: API_KEY,
         },
       });
-     // console.log(weatherResponse.data);
+      //console.log(weatherResponse.data);
       //console.log(forecastResponse.data);
 
       const weatherData = weatherResponse.data;
@@ -81,6 +82,7 @@ function App() {
     
   };
   
+  //set background image according to weather 
   useEffect(() => {
     if (weather) {
       switch (weather.weather[0].main) {
