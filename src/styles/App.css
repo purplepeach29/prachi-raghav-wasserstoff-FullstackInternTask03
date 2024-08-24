@@ -1,0 +1,154 @@
+.app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  width: 100%;
+  background-image:url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ffreebie.photography%2Fnature%2Fcloudy_blue_sky.jpg&f=1&nofb=1&ipt=2f67526affe8698975cf20558ed1a35d8203653b9677c83b4efd610ebb6ce99e&ipo=images");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  color: #0e0d0d;
+  min-height: 600px;
+}
+
+.nav
+{
+  background-color: #0a2f4e96;/*rgb(64 64 217 / 48%);*/
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 10px 7px 7px 1px #0a2f4e;
+  color:white
+}
+
+.weather-form button {
+  padding: 5px;
+  border-radius: 20px;
+  margin: 5px;
+}
+
+.unit-toggle {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form
+{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 60%;
+  
+}
+.place
+{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-left: 20px;
+}
+
+.clear
+{
+  border-radius: 30px;
+  background-color: transparent;
+  color: #0f5086;
+  width: 20px;
+  height: fit-content;
+  text-align: center;
+  margin: 12px;
+}
+
+.clear:hover
+{
+  background-color: rgb(13 82 168 / 42%);
+}
+.unit-toggle label {
+  margin: 0 0px;
+}
+
+img
+{
+  width: 30px;
+  height: 30px;
+}
+.weather-details
+{
+  margin-left: 0px;
+}
+.weather-forecast {
+  margin: 20px 0;
+}
+
+.weather-summary
+{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.box, .layout 
+{
+  display: flex;
+}
+.weather-forecast
+{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 0px;
+  margin-left: auto;
+  width: 40%;
+  background-color:#0a2f4e96;
+}
+
+.forecast-day {
+  margin: 7px;
+  display: flex;
+  padding: 10px;
+  justify-content: space-evenly;
+  background-color: rgb(117 170 215 / 53%);
+  border-radius: 10px;
+  min-width: max-content;
+  width: 80%;
+}
+
+.forecast-day > h3, .forecast-day > p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .weather-forecast {  
+    width: 100%;
+   } 
+   .form{
+    width: 100%;
+   }
+   .layout
+   {
+    flex-direction: column;
+   }
+   .forecast-day
+   {
+    margin: 7px;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: max-content;
+   }
+ } 
+ @media (min-width: 768px) { 
+ .weather-forecast {
+  flex-direction: column; 
+   } 
+ }
+

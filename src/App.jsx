@@ -9,6 +9,7 @@ import rain from './assets/rain.jpg';
 import haze from './assets/haze.jpg';
 import back from './assets/bg.gif';
 
+import './styles/App.css';
 
 const API_KEY = '76bde0717dfb4dd252ac6ce284e36507'; // API key from openweathermap
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
